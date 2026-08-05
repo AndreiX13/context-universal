@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "context-universal",
+  "description": "The unified universal-context plugin — quality canon + curated best-of skills, distilled from ten source repos.",
+  "owner": { "name": "AndreiX13" },
+  "metadata": {
+    "description": "Install once, use in every project. A single deduplicated quality bar (canon/) plus ~24 curated skills, design review/deslop commands, personas, and native tooling.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "context-universal",
+      "source": "./",
+      "description": "Deduplicated design/quality canon (anti-slop, motion, typography, color, 8pt spacing, copy, honesty) + curated skills across engineering discipline, design, research, knowledge-work, and marketing, plus one gated specialized skill (android-reverse-engineering).",
+      "version": "0.1.0",
+      "author": { "name": "AndreiX13" },
+      "keywords": ["context", "skills", "design", "anti-slop", "canon", "marketing", "research", "engineering"],
+      "category": "productivity"
+    }
+  ]
+}

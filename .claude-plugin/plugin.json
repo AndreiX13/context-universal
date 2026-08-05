@@ -1,0 +1,10 @@
+{
+  "name": "context-universal",
+  "version": "0.1.0",
+  "description": "One operating context distilled from ten repos: a deduplicated quality canon (anti-slop, motion, typography, color, 8pt spacing, copy, honesty) plus a curated best-of skill library, design commands, and Windows-native tooling.",
+  "author": { "name": "AndreiX13" },
+  "license": "SEE attribution/ATTRIBUTIONS.md",
+  "keywords": ["context", "skills", "design", "anti-slop", "canon", "quality-bar", "claude-code"],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}
