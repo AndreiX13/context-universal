@@ -14,6 +14,14 @@ import sys
 
 from fontTools.ttLib import TTFont
 
+# Windows consoles default to cp1252 and crash when printing ș/ț. Force UTF-8 output
+# so this checker can actually print the diacritics it verifies.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except (AttributeError, ValueError):
+    pass
+
 CU_VIRGULA = {
     0x0218: 'Ș', 0x0219: 'ș', 0x021A: 'Ț', 0x021B: 'ț',
 }
