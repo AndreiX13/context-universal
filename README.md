@@ -49,26 +49,80 @@ wins. It applies to **any** visual output — app UI, slides, PDFs, diagrams, ar
   emails · marketing-psychology · pricing · customer-research
 - **Specialized (gated)** — android-reverse-engineering
 
-## Install
+## How to use it
 
-Once published to GitHub:
+Two ways. **Option A is recommended** — lowest token cost, works everywhere, nothing to install.
 
+### Option A — Ambient context (global `CLAUDE.md` pointer)
+
+A small always-on block in your Claude Code memory keeps the prime directives active in **every**
+project and points at `canon/` + `skills/`, which the agent opens **on demand**. The heavy content is
+never force-loaded, so the baseline stays tiny.
+
+**Windows (automatic):**
+```powershell
+git clone https://github.com/AndreiX13/context-universal.git
+cd context-universal
+powershell -ExecutionPolicy Bypass -File install\setup-windows.ps1
+```
+
+**macOS / Linux / Git Bash:**
 ```bash
+git clone https://github.com/AndreiX13/context-universal.git
+cd context-universal
+bash install/setup.sh
+```
+
+The setup script writes (or updates) a marked `context-universal` block in your global
+`~/.claude/CLAUDE.md`, filling in the absolute path to wherever you cloned the repo. It's idempotent —
+re-run it any time — and it never touches other content in that file.
+
+- **Global** (default) → applies in every project.
+- **This project only** → run `... setup-windows.ps1 -Target project` (or `bash install/setup.sh project`)
+  from a project root; it writes a local `./CLAUDE.md` instead.
+- **Manual** → copy the block from [`install/global-CLAUDE.snippet.md`](install/global-CLAUDE.snippet.md)
+  into `~/.claude/CLAUDE.md` and replace `__CU_ROOT__` with the repo's absolute path.
+
+> Keep the repo where you cloned it — the pointer uses absolute paths. If you move it, just re-run the
+> setup script. Changes take effect in **new** Claude Code sessions.
+
+### Option B — As a Claude Code plugin
+
+`/plugin` is a command **inside the interactive Claude Code CLI** — it is *not* a PowerShell or bash
+command. Open a terminal, start the CLI with `claude`, then type these at its prompt:
+
+```text
 /plugin marketplace add AndreiX13/context-universal
 /plugin install context-universal@context-universal
 ```
 
-Or use it as ambient context: symlink / copy `CLAUDE.md` into a project, or point your agent at
-`canon/` and `skills/`.
+The repo is private; git clones it with your saved GitHub credentials. This surfaces the 24 skill
+descriptions and the slash-commands to the agent (skill bodies still load only when triggered).
 
-## Validate
+### What it costs (tokens)
+
+Progressive disclosure keeps it cheap — it does **not** load the whole repo every message:
+
+| Always loaded (small) | Loaded only when relevant |
+|---|---|
+| the 6 directives + the canon index (Option A), or the 24 short skill descriptions (Option B) | a specific `canon/*.md`, a skill body, its `references/` |
+
+### Update
+
+```bash
+git pull
+```
+
+Option A: re-run the setup script afterward to refresh paths. Option B: update via `/plugin`.
+
+### Validate (after editing or adding skills)
 
 ```bash
 node tools/validate-skills.mjs
 ```
 
 Zero dependencies, runs natively on Windows. Checks every skill against the one schema in
-`AUTHORING.md`. Current state: **24 skills · 0 errors.**
+[`AUTHORING.md`](AUTHORING.md). Current state: **24 skills · 0 errors.**
 
 ## Provenance
 
