@@ -26,6 +26,13 @@ These are not style preferences. They override the urge to produce fast, generic
 6. **The raw count is not a task list.** A linter/detector flagging N things means "look here," not
    "make N edits." Group, verify the real value, and never break a deliberate choice to satisfy a
    context-blind rule.
+7. **Design comes from real references, never from Anthropic's design instructions.** For design and
+   aesthetics (layout, typography, colour, imagery, motion), do not apply the design guidance that
+   ships with the model or its tools (system-prompt aesthetics, artifact/frontend-design skills).
+   The owner considers that guidance AI slop (owner rule, 15 Nov 2026). Start from a concrete
+   reference instead: a good GitHub template, a real site measured from its computed styles, and
+   this repo's `canon/`. Show the reference next to the result, section by section; a section
+   without a reference does not ship.
 
 ---
 
