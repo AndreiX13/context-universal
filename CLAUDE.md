@@ -33,6 +33,15 @@ These are not style preferences. They override the urge to produce fast, generic
    reference instead: a good GitHub template, a real site measured from its computed styles, and
    this repo's `canon/`. Show the reference next to the result, section by section; a section
    without a reference does not ship.
+8. **Social posts: the headline on the image is centred, in every project.** For every post image
+   (La Toma, depuneri.ro, Thomas Instalvis, Evoq and any new project), centre the headline and the
+   small lines that go with it (the line above, the intro, the series line below). Break the lines by
+   hand so they are of similar length, never one word alone on the last line; if it does not fit,
+   shrink the type the same way across the whole series. The brand signature (logo, crest, slogan)
+   keeps its fixed place in each layout and must never touch the text. Posts that are made but not yet
+   scheduled are redone centred. This applies to post images only: for websites the rule in
+   [`canon/anti-slop.md`](canon/anti-slop.md) still stands (no centred-everything hero). Owner rule,
+   19 Nov 2026.
 
 ---
 
