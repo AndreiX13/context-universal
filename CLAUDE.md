@@ -42,6 +42,14 @@ These are not style preferences. They override the urge to produce fast, generic
    scheduled are redone centred. This applies to post images only: for websites the rule in
    [`canon/anti-slop.md`](canon/anti-slop.md) still stands (no centred-everything hero). Owner rule,
    19 Nov 2026.
+9. **Quantities and material lists: measured by us, never copied, checked before they leave.** Every
+   quantity in an offer, a material list, a supplier request or a contract is measured on the drawing
+   or the model, with the sheet and the method next to it. The designer's bill of quantities, a
+   colleague's offer or an old sheet are not sources. What the drawing doesn't show is named and
+   asked, never guessed. A new rule applies backwards to all work in progress. Before any list goes
+   out: a second, independent count compared line by line, every difference resolved on the drawing,
+   and the same figures in every document. See [`canon/quantities.md`](canon/quantities.md). Owner
+   rule, 22–23 Nov 2026.
 
 ---
 
@@ -59,6 +67,7 @@ disagrees with canon, **canon wins.**
 | [`canon/spacing-8pt.md`](canon/spacing-8pt.md) | 8pt grid, proximity, whitespace, radius, hit targets |
 | [`canon/copy.md`](canon/copy.md) | Clear-before-clever, banned openings, errors, em-dash rule |
 | [`canon/honesty.md`](canon/honesty.md) | State = mark + text; signals not verdicts; no dead controls |
+| [`canon/quantities.md`](canon/quantities.md) | Quantities measured on the drawing, never copied; the check before a list goes out |
 
 Canon applies to **every visual deliverable**, not just app UI — slides, PDFs, diagrams, and
 published artifacts follow the same grid, motion, and anti-slop rules.
